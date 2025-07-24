@@ -20,7 +20,7 @@ public class AgendaDia {
         return true;
     }
 
-    public List<Reserva> getReserva(){
+    public List<Reserva> getReservas(){
         return this.ReservasDia;
     }
 
