@@ -3,29 +3,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AgendaDia {
-    private List<Compromisso> compromissosDia;
+    private List<Reserva> ReservasDia;
 
     //metodo construtor
     public AgendaDia(){
-        compromissosDia = new ArrayList<>();
+        ReservasDia = new ArrayList<>();
     }
 
-
-    public boolean adicionarCompromisso(Compromisso novoCompromisso){
-        for(Compromisso atual: compromissosDia){
-            if(novoCompromisso.conflita(atual)){
+    public boolean adicionarReservaDia(Reserva novaReserva){
+        for(Reserva atual: ReservasDia){
+            if(novaReserva.conflita(atual)){
                 return false;
             }
         }
-        compromissosDia.add(novoCompromisso);
+        ReservasDia.add(novaReserva);
         return true;
     }
 
-    public List<Compromisso> getCompromissos(){
-        return this.compromissosDia;
+    public List<Reserva> getReserva(){
+        return this.ReservasDia;
     }
 
-    public boolean removerCompromisso(Compromisso compromisso){
-        return compromissosDia.remove(compromisso);
+    public boolean removerReserva(Reserva r){
+        return ReservasDia.remove(r);
     }  
 }

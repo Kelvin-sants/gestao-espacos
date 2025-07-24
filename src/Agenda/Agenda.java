@@ -11,10 +11,10 @@ public class Agenda {
         dias = new HashMap<>();
     }
 
-    //tenta adicionar um compromisso a um determinado dia
-    public boolean adicionarCompromisso(LocalDate data, Compromisso c){
+    //tenta adicionar uma reserva a um determinado dia
+    public boolean adicionarReserva(LocalDate data, Reserva c){
         AgendaDia dia = dias.getOrDefault(data, new AgendaDia());
-        boolean status = dia.adicionarCompromisso(c);
+        boolean status = dia.adicionarReservaDia(c);
         dias.put(data, dia);
         return status;
     }
